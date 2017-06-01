@@ -1,10 +1,6 @@
 
 package hangman.admin;
 
-/**
- *
- * @author huy
- */
 
 import java.io.*;
 import java.util.*;
@@ -50,7 +46,7 @@ public class WordServlet extends HttpServlet{
             }
         } else if (game.isValidInput(guess.charAt(0))){
             // continue with current game
-            char ch = Character.toLowerCase(guess.charAt(0));  // letter that user has guessed
+            char ch = Character.toLowerCase(guess.charAt(0)); 
             int result = game.playGame(ch);
             switch(result) {
                 case 0: // good guess, continue game
